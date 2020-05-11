@@ -16,11 +16,22 @@ namespace HelloApp
         {
             InitializeComponent();
             slider.Value = 0.8;
+            //if (Device.OS == TargetPlatform.iOS)
+            //    Padding = new Thickness(0, 20, 0, 0);
+            //else if(Device.OS == TargetPlatform.Android)
+            //    Padding = new Thickness(10, 20, 0, 0);
+            /*
+            switch (Device.RuntimePlatform)
+            {
+                case Device.iOS:
+                    Padding = new Thickness(0, 20, 0, 0);
+                    break;
+                case Device.Android:
+                    Padding = new Thickness(10, 20, 0, 0);
+                    break;
+            }
+            */
         }
 
-        private void Slider_ValueChanged(object sender, ValueChangedEventArgs e)
-        {
-            label.Text = String.Format("Value is {0:F2}", e.NewValue);
-        }
     }
 }

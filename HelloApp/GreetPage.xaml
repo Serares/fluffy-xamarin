@@ -4,9 +4,22 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="HelloApp.GreetPage">
-    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
-    <Label Text="Hello World!!" x:Name="label" />
-    <Slider ValueChanged="Slider_ValueChanged" x:Name="slider"/>
+             x:Class="HelloApp.GreetPage"
+             >
+    <!-- property element syntax -->
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness"
+                    iOS="0, 20, 0, 0"
+                    Android="0, 40, 0,0">
+        </OnPlatform>
+    </ContentPage.Padding>
+    <StackLayout BindingContext="{x:Reference slider}" HorizontalOptions="Center" VerticalOptions="Center">
+        <BoxView Color="Green" Opacity="{Binding Value }" />
+        <!-- xaml markup extentions -->
+        <Label Text="{Binding Value, 
+            StringFormat='Value is {0:F2}' }"
+            Opacity="{Binding Value}"   
+            x:Name="label" />
+        <Slider x:Name="slider" />
     </StackLayout>
 </ContentPage>
