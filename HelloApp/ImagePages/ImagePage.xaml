@@ -8,8 +8,8 @@
              x:Class="HelloApp.ImagePages.ImagePage">
     <StackLayout>
         <AbsoluteLayout>
-                <!--you can bind any Attribute of an element to another elements attribute -->
-            <!--no need for activity indicator because embeded images instantly load--> 
+            <!--you can bind any Attribute of an element to another elements attribute -->
+            <!--no need for activity indicator because embeded images instantly load-->
             <!--<ActivityIndicator 
                 Color="Tomato"
                 IsRunning="{Binding 
@@ -20,12 +20,19 @@
                   AbsoluteLayout.LayoutBounds="0.5, 0.5, 100 , 100"
                   AbsoluteLayout.LayoutFlags="PositionProportional"
               />-->
-            
+
             <!--<Image x:Name="image" Aspect="AspectFill"
                    AbsoluteLayout.LayoutBounds="0,0, 1,1 "
                    AbsoluteLayout.LayoutFlags="All"
                    />-->
-            <Image Source="{local:EmbeddedImage HelloApp.Images.amenda.JPG}" x:Name="image" />
+            <!--<Image Source="{local:EmbeddedImage HelloApp.Images.amenda.JPG}" x:Name="image" />-->
+            <Button x:Name="btn" >
+                <Button.ImageSource>
+                    <OnPlatform x:TypeArguments="FileImageSource" iOS="clock.png" Android="clock.png">
+
+                    </OnPlatform>
+                </Button.ImageSource>
+            </Button>
         </AbsoluteLayout>
     </StackLayout>
 </ContentPage>

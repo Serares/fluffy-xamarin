@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using Xamarin.Forms;
+using Xamarin.Forms.PlatformConfiguration;
 using Xamarin.Forms.Xaml;
 
 namespace HelloApp.ImagePages
@@ -12,6 +13,7 @@ namespace HelloApp.ImagePages
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ImagePage : ContentPage
     {
+        [Obsolete]
         public ImagePage()
         {
             InitializeComponent();
@@ -24,6 +26,8 @@ namespace HelloApp.ImagePages
             image.Source = imageSource;
             */
             //image.Source = ImageSource.FromResource("HelloApp.Images.amenda.JPG");
+            //btn.Image = (FileImageSource)ImageSource.FromFile("clock.png");
+
         }
     }
 }
