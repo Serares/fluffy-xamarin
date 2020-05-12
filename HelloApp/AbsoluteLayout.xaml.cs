@@ -15,13 +15,13 @@ namespace HelloApp
         public AbsolutePage()
         {
             InitializeComponent();
-            var absoluteLayout = new AbsoluteLayout();
-            Content = absoluteLayout;
+            //var absoluteLayout = new AbsoluteLayout();
+            //Content = absoluteLayout;
 
-            var aquabox = new BoxView { Color = Color.Aqua };
-            absoluteLayout.Children.Add(aquabox, new Rectangle(0, 0, 1, 1), AbsoluteLayoutFlags.All);
-            AbsoluteLayout.SetLayoutBounds(aquabox, new Rectangle(0, 0, 1, 1));
-            AbsoluteLayout.SetLayoutFlags(aquabox, AbsoluteLayoutFlags.HeightProportional);
+            //var aquabox = new BoxView { Color = Color.Aqua };
+            //absoluteLayout.Children.Add(aquabox, new Rectangle(0, 0, 1, 1), AbsoluteLayoutFlags.All);
+            //AbsoluteLayout.SetLayoutBounds(aquabox, new Rectangle(0, 0, 1, 1));
+            //AbsoluteLayout.SetLayoutFlags(aquabox, AbsoluteLayoutFlags.HeightProportional);
         }
 
     }

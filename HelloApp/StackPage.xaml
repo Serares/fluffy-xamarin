@@ -7,16 +7,22 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="HelloApp.StackPage">
-    <StackLayout 
-        Spacing="20"
-        Padding="20"
-        BackgroundColor="GreenYellow"
-        Orientation="Vertical"
-        VerticalOptions="Center"
-        HorizontalOptions="Center"
-        >
-        <Label>1</Label>
-        <Label>2</Label>
-        <Label>3</Label>
+    <StackLayout >
+        <StackLayout Padding="10">
+            <Label Text="name_of_user" TextColor="Black"/>
+        </StackLayout>
+        <Image Source="http://lorempixel.com/1920/1080/nature/3/"  />
+        <StackLayout Padding="10, 0" Spacing="10" Orientation="Horizontal">
+            <Label TextColor="Black">Like</Label>
+            <Label TextColor="Black">Comment</Label>
+            <Label TextColor="Black">Share</Label>
+        </StackLayout>
+        <BoxView Color="#f0f0f0" HeightRequest="1" />
+        <StackLayout Padding="10" Spacing="10">
+            <Label Text="700 likes" FontAttributes="Bold" FontSize="18" TextColor="Black" />
+            <Label>
+                place holder text
+            </Label>
+        </StackLayout>
     </StackLayout>
 </ContentPage>

@@ -1,20 +1,58 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="HelloApp.RelativePage">
+
+    <RelativeLayout>
+        <BoxView 
+            x:Name="Banner"
+            BackgroundColor="Beige"
+                 RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"
+                 RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.3}" />
+        <StackLayout
+            Orientation="Vertical"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"
+                 RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.3}">
+            <Label FontSize="40" Text="11.2$"/>
+            <Button Text="Add $7.99 Credit" BackgroundColor="#1695a3" BorderRadius="15" HeightRequest="50" FontSize="15" FontAttributes="Bold" TextColor="White" />
+        </StackLayout>
+        <StackLayout
+            RelativeLayout.WidthConstraint="{ConstraintExpression 
+            Type=RelativeToParent, 
+            Property=Width, 
+            Factor=1}"
+            
+            RelativeLayout.YConstraint="{ConstraintExpression 
+            Type=RelativeToView, 
+            ElementName=Banner,
+            Property=Height, 
+            Factor=1,
+            Constant=30}"
+            >
+            <Label Text="Why pay for credit?" HorizontalOptions="Center" FontAttributes="Bold" FontSize="15" />
+            <Label Text="Why pay for credit ba nebunule" TextColor="Black" />
+        </StackLayout>
+    </RelativeLayout>
     <!--<RelativeLayout>
-        --><!--xaml markup extention--><!--
+        -->
+    <!--xaml markup extention-->
+    <!--
         <BoxView Color="Aqua" 
                  RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"
                  RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.3}"
                  x:Name="Banner"
                  />
-        --><!-- can't set the type to another element so we need to set it to be relative to the view 
+        -->
+    <!-- can't set the type to another element so we need to set it to be relative to the view 
             but you can give the element name after the Type 
-        --><!--
+        -->
+    <!--
         <BoxView Color="Silver" 
                  RelativeLayout.YConstraint="{ConstraintExpression 
             Type=RelativeToView, 
@@ -22,7 +60,9 @@
             Property=Height, 
             Factor=1,
             Constant=20}"
-                 
                  />
     </RelativeLayout>-->
+
+
+
 </ContentPage>
