@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="HelloApp.GridPage">
+    <Grid ColumnSpacing="20">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="20"/>
+            <!-- 2* two times bigger than the one above -->
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <!-- attached bindable properties -->
+        <Label Grid.Row="0" Grid.Column="0" Text="Label 1" BackgroundColor="Red"></Label>
+        <Label Grid.Row="1" Grid.Column="1" Text="Label 2" BackgroundColor="Red"></Label>
+        <Label Grid.Row="2" Grid.Column="2" Text="Label 3" BackgroundColor="Red"></Label>
+    </Grid>
+</ContentPage>
