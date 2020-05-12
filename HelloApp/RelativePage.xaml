@@ -5,7 +5,24 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="HelloApp.RelativePage">
-    <RelativeLayout>
-        <BoxView Color="Aqua" />
-    </RelativeLayout>
+    <!--<RelativeLayout>
+        --><!--xaml markup extention--><!--
+        <BoxView Color="Aqua" 
+                 RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"
+                 RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.3}"
+                 x:Name="Banner"
+                 />
+        --><!-- can't set the type to another element so we need to set it to be relative to the view 
+            but you can give the element name after the Type 
+        --><!--
+        <BoxView Color="Silver" 
+                 RelativeLayout.YConstraint="{ConstraintExpression 
+            Type=RelativeToView, 
+            ElementName=Banner, 
+            Property=Height, 
+            Factor=1,
+            Constant=20}"
+                 
+                 />
+    </RelativeLayout>-->
 </ContentPage>
