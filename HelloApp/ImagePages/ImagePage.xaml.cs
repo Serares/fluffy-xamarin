@@ -23,7 +23,7 @@ namespace HelloApp.ImagePages
 
             image.Source = imageSource;
             */
-            image.Source = ImageSource.FromResource("HelloApp.Images.amenda.JPG");
+            //image.Source = ImageSource.FromResource("HelloApp.Images.amenda.JPG");
         }
     }
 }

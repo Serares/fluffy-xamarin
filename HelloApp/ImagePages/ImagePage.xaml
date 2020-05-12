@@ -4,6 +4,7 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
+             xmlns:local="clr-namespace:HelloApp.MarkupExtentions"
              x:Class="HelloApp.ImagePages.ImagePage">
     <StackLayout>
         <AbsoluteLayout>
@@ -20,10 +21,11 @@
                   AbsoluteLayout.LayoutFlags="PositionProportional"
               />-->
             
-            <Image x:Name="image" Aspect="AspectFill"
+            <!--<Image x:Name="image" Aspect="AspectFill"
                    AbsoluteLayout.LayoutBounds="0,0, 1,1 "
                    AbsoluteLayout.LayoutFlags="All"
-                   />
+                   />-->
+            <Image Source="{local:EmbeddedImage HelloApp.Images.amenda.JPG}" x:Name="image" />
         </AbsoluteLayout>
     </StackLayout>
 </ContentPage>
