@@ -3,6 +3,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using HelloApp.Services;
 using HelloApp.Views;
+using HelloApp.ImagePages;
 
 namespace HelloApp
 {
@@ -13,8 +14,9 @@ namespace HelloApp
             InitializeComponent();
 
             DependencyService.Register<MockDataStore>();
-            MainPage = new RelativePage();
+            MainPage = new ImagePage();
         }
+        //https://i.picsum.photos/id/9/1920/1080.jpg
 
         protected override void OnStart()
         {
