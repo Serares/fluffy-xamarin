@@ -14,7 +14,7 @@ namespace HelloApp
             InitializeComponent();
 
             DependencyService.Register<MockDataStore>();
-            MainPage = new ImagePage();
+            MainPage = new RoundImage();
         }
         //https://i.picsum.photos/id/9/1920/1080.jpg
 

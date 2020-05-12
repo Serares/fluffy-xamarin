@@ -13,7 +13,6 @@ namespace HelloApp.ImagePages
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ImagePage : ContentPage
     {
-        [Obsolete]
         public ImagePage()
         {
             InitializeComponent();
