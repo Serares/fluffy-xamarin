@@ -13,7 +13,7 @@ namespace HelloApp
             InitializeComponent();
 
             DependencyService.Register<MockDataStore>();
-            MainPage = new GreetPage();
+            MainPage = new StackPage();
         }
 
         protected override void OnStart()

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    Padding="0, 20 ,0 ,0"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="HelloApp.StackPage">
+    <StackLayout 
+        Spacing="20"
+        Padding="20"
+        BackgroundColor="GreenYellow"
+        Orientation="Vertical"
+        VerticalOptions="Center"
+        HorizontalOptions="Center"
+        >
+        <Label>1</Label>
+        <Label>2</Label>
+        <Label>3</Label>
+    </StackLayout>
+</ContentPage>
